@@ -1,0 +1,40 @@
+ion-content {
+  --background: rgb(46, 46, 46);
+}
+ion-card {
+  width: 95vw;
+  height: 10vw;
+  ion-card-title {
+    font-size: 8vw;
+  }
+}
+
+.truco {
+  display: flex;
+  justify-content: center;
+  ion-button {
+    width: 15vw;
+    height: 15vw;
+    font-size: 5vw;
+  }
+}
+
+.pontos {
+  ion-row {
+    ion-col {
+      font-size: 6vw;
+    }
+  }
+  ion-button {
+    width: 15vw;
+    height: 15vw;
+    font-size: 6vw;
+  }
+}
+
+.partidas{
+  margin: 10vw auto;
+  font-size: 6vw;
+}
+
+
