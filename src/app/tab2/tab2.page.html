@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title> Contador de Tento </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,57 +11,87 @@
 
   <ion-grid class="truco">
     <ion-row>
-      <ion-col> <ion-button (click)="umPonto()">1</ion-button> </ion-col>
-      <ion-col> <ion-button (click)="truco()">3</ion-button></ion-col>
-      <ion-col> <ion-button (click)="seis()">6</ion-button></ion-col>
-      <ion-col> <ion-button (click)="nove()">9</ion-button></ion-col>
-      <ion-col> <ion-button (click)="doze()">12</ion-button></ion-col>
+      <ion-col>
+        <ion-button (click)="umPonto()" color="tertiary">1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="truco()" color="tertiary">3</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="seis()" color="tertiary">6</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="nove()" color="tertiary">9</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="doze()" color="tertiary">12</ion-button>
+      </ion-col>
     </ion-row>
   </ion-grid>
 
   <div class="pontos">
-  <ion-grid>
-    <ion-row class="ion-text-center">
-      <ion-col>Time 1</ion-col>
-      <ion-col>Time 2</ion-col>
-    </ion-row>
-    <ion-row class="ion-text-center">
-      <ion-col><ion-button (click)="pontoTimeUmMais()">+</ion-button></ion-col>
-      <ion-col
-        ><ion-button (click)="pontoTimeDoisMais()">+</ion-button></ion-col
-      >
-    </ion-row>
-    <ion-row class="ion-text-center">
-      <ion-col>{{pontoUm}}</ion-col>
-      <ion-col>{{pontoDois}}</ion-col>
-    </ion-row>
-    <ion-row class="ion-text-center">
-      <ion-col><ion-button (click)="pontoTimeUmMenos()">-</ion-button></ion-col>
-      <ion-col
-        ><ion-button (click)="pontoTimeDoisMenos()">-</ion-button></ion-col
-      >
-    </ion-row>
-  </ion-grid>
-</div>
+    <ion-grid>
+      <ion-row class="ion-text-center">
+        <ion-col>
+          <h1>Time 1</h1>
+        </ion-col>
+        <ion-col>
+          <h1>Time 2</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-text-center">
+        <ion-col>
+          <ion-button (click)="pontoTimeUmMais()" color="success">+</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="pontoTimeDoisMais()" color="success">+</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-text-center">
+        <ion-col>
+          <h1>{{pontoUm}}</h1>
+        </ion-col>
+        <ion-col>
+          <h1>{{pontoDois}}</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-text-center">
+        <ion-col>
+          <ion-button (click)="pontoTimeUmMenos()" color="danger">-</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="pontoTimeDoisMenos()" color="danger">-</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
-<div class="partidas">
-  <ion-grid>
-    Partidas
-    <ion-row>
-      <ion-col>Time 1: </ion-col>
-      <ion-col>{{partidaUm}}</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>Time 2: </ion-col>
-      <ion-col>{{partidaDois}}</ion-col>
-    </ion-row>
-  </ion-grid>
-</div>
+  <div class="partidas">
+    <ion-grid>
+      <h1>Partidas</h1>
+      <ion-row>
+        <ion-col>
+          <h1>Time 1: </h1>
+        </ion-col>
+        <ion-col>
+          <h1>{{partidaUm}} </h1>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h1>Time 2: </h1>
+        </ion-col>
+        <ion-col>
+          <h1>{{partidaDois}} </h1>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar (click)="Limpar()" class="btn" >
+  <ion-toolbar (click)="Limpar()" class="btn" color="dark">
     <ion-title class="ion-text-center">Limpar!!</ion-title>
   </ion-toolbar>
 </ion-footer>
